@@ -4,7 +4,11 @@ import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== 'undefined') {
-      return document.documentElement.classList.contains('dark')
+      const savedTheme = localStorage.getItem('theme')
+      if (savedTheme) {
+        return savedTheme === 'dark'
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
     }
     return false
   })

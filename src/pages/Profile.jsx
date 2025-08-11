@@ -53,7 +53,7 @@ export default function Profile() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-500">You haven't listed any books yet.</p>
+            <p className="text-gray-500">You haven&apos;t listed any books yet.</p>
             <p className="text-sm text-gray-400 mt-2">
               Add your first book to start swapping!
             </p>
